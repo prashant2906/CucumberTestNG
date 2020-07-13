@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="46.233582">
+<testcase classname="Gillette Registration" name="Registration for Gillette" time="23.500563">
+<system-out><![CDATA[Given user is on Gillette homepage..........................................passed
+And Gillette title is displayed on the screen...............................passed
+When user clicked on Register link..........................................passed
+Then user fill "Prashant" and "Goel" and "abc123@gmail.com" and "abc123@1" and "abc123@1" details.passed
+And user select the "06" and "1990" DOB and "122001"........................passed
+Then user clicked on create your profile button.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Gillette Signin" name="Signin to Gillette Website" time="13.776571">
+<system-out><![CDATA[Given user is on Gillette homepage Login....................................passed
+And Gillette title is displayed on the screen Login.........................passed
+When user clicked on Signin link............................................passed
+Then user enters "abc123@gmail.com" and "abc123@1"..........................passed
+And user clicked on Signin button...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Gillette ForgotPassword" name="Forgot password for Gillette Website" time="8.956448">
+<system-out><![CDATA[Given user is on Gillette homepage Login....................................passed
+And Gillette title is displayed on the screen Login.........................passed
+When user clicked on Signin link............................................passed
+And user clicks on forgot password link.....................................passed
+Then user enters "abc123@gmail.com".........................................passed
+And user clicked on create new password button..............................passed
+]]></system-out>
+</testcase>
+</testsuite>

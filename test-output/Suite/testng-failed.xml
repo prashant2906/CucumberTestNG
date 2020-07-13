@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="appURL" value="https://www.gillette.co.in/en-in"/>
+  <parameter name="browserType" value="chrome"/>
+  <test thread-count="1" name="TestBDD(failed)">
+    <classes>
+      <class name="runner.TestRunner">
+        <methods>
+          <include name="startReport"/>
+          <include name="tearDownClass"/>
+          <include name="feature" invocation-numbers="1 2 3"/>
+          <include name="setUpClass"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- runner.TestRunner -->
+    </classes>
+  </test> <!-- TestBDD(failed) -->
+</suite> <!-- Failed suite [Suite] -->

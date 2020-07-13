@@ -1,0 +1,370 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11539512500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.setUP()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Registration for Gillette",
+        "description": "",
+        "id": "gillette-registration;registration-for-gillette;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 115680900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on Gillette homepage",
+            "match": {
+              "location": "StepDefinition.user_is_on_Gillette_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 92434600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Gillette title is displayed on the screen",
+            "match": {
+              "location": "StepDefinition.gillette_title_is_displayed_on_the_screen()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4872457500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicked on Register link",
+            "match": {
+              "location": "StepDefinition.user_clicked_on_Register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1132092400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user fill \"Prashant\" and \"Goel\" and \"abc123@gmail.com\" and \"abc123@1\" and \"abc123@1\" details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Prashant",
+                  "offset": 11
+                },
+                {
+                  "val": "Goel",
+                  "offset": 26
+                },
+                {
+                  "val": "abc123@gmail.com",
+                  "offset": 37
+                },
+                {
+                  "val": "abc123@1",
+                  "offset": 60
+                },
+                {
+                  "val": "abc123@1",
+                  "offset": 75
+                }
+              ],
+              "location": "StepDefinition.user_fill_and_and_and_and_details(String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 867144000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user select the \"06\" and \"1990\" DOB and \"122001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "06",
+                  "offset": 17
+                },
+                {
+                  "val": "1990",
+                  "offset": 26
+                },
+                {
+                  "val": "122001",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinition.user_select_the_and_DOB_and(String,String,String)"
+            },
+            "matchedColumns": [
+              5,
+              6,
+              7
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4881241400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user clicked on create your profile button",
+            "match": {
+              "location": "StepDefinition.user_clicked_on_create_your_profile_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Gillette Registration",
+    "description": "User want to register new user to Gillette website",
+    "id": "gillette-registration",
+    "keyword": "Feature",
+    "uri": "01registration.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 21314000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.setUP()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Signin to Gillette Website",
+        "description": "",
+        "id": "gillette-signin;signin-to-gillette-website;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 22625100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on Gillette homepage Login",
+            "match": {
+              "location": "loginStepDef.user_is_on_Gillette_homepage_Login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 71900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Gillette title is displayed on the screen Login",
+            "match": {
+              "location": "loginStepDef.gillette_title_is_displayed_on_the_screen_Login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2897112000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicked on Signin link",
+            "match": {
+              "location": "loginStepDef.user_clicked_on_Signin_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 450966700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enters \"abc123@gmail.com\" and \"abc123@1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "abc123@gmail.com",
+                  "offset": 13
+                },
+                {
+                  "val": "abc123@1",
+                  "offset": 36
+                }
+              ],
+              "location": "loginStepDef.user_enters_username_and_password(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10384481100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicked on Signin button",
+            "match": {
+              "location": "loginStepDef.user_clicked_on_Signin_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Gillette Signin",
+    "description": "User want to Signin to Gillette website with Username and Password",
+    "id": "gillette-signin",
+    "keyword": "Feature",
+    "uri": "02login.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 27797900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.setUP()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Forgot password for Gillette Website",
+        "description": "",
+        "id": "gillette-forgotpassword;forgot-password-for-gillette-website;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 19073700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on Gillette homepage Login",
+            "match": {
+              "location": "loginStepDef.user_is_on_Gillette_homepage_Login()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 94000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Gillette title is displayed on the screen Login",
+            "match": {
+              "location": "loginStepDef.gillette_title_is_displayed_on_the_screen_Login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3309453600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicked on Signin link",
+            "match": {
+              "location": "loginStepDef.user_clicked_on_Signin_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2608888900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks on forgot password link",
+            "match": {
+              "location": "forgotPasswordStepDef.user_clicks_on_forgot_password_link()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 240594700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters \"abc123@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "abc123@gmail.com",
+                  "offset": 13
+                }
+              ],
+              "location": "forgotPasswordStepDef.user_enters(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2750544800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user clicked on create new password button",
+            "match": {
+              "location": "forgotPasswordStepDef.user_clicked_on_create_new_password_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Gillette ForgotPassword",
+    "description": "User wants to check forgot password flow want to Signin to Gillette website with Username and Password",
+    "id": "gillette-forgotpassword",
+    "keyword": "Feature",
+    "uri": "03forgotPassword.feature"
+  }
+]
