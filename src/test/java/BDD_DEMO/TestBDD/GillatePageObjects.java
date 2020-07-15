@@ -46,7 +46,7 @@ public class GillatePageObjects
     By SigningPassword =   By.name(PropertyFiles.propertiesFile().getProperty("passwordname"));
     By SigningPasswordxpath =   By.xpath(PropertyFiles.propertiesFile().getProperty("passwordxpath"));
     By signinButton =   By.id(PropertyFiles.propertiesFile().getProperty("signinid"));
-    By logoutlink= By.className(PropertyFiles.propertiesFile().getProperty("logout"));
+    By logoutlink= By.id(PropertyFiles.propertiesFile().getProperty("logoutid"));
     By logoutConfirm=By.id(PropertyFiles.propertiesFile().getProperty("logoutConfirm"));
     By forgotPassLink= By.className(PropertyFiles.propertiesFile().getProperty("forgotPassLink"));
     By forgotPassEmail= By.id(PropertyFiles.propertiesFile().getProperty("forgotPassEmail"));

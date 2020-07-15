@@ -141,7 +141,7 @@ public void endreport() {
 
 }
 //	@Parameters({ "browserType", "appURL"})
-	@BeforeSuite()
+//	@BeforeSuite()
 	public WebDriver initializeTestBaseSetup(String browserType, String appURL )  {
 
 		try {

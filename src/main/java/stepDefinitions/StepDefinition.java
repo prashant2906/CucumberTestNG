@@ -36,11 +36,13 @@ public class StepDefinition extends BaseSetup
 	
 	@Before
 	public void setUP(){
+		
 		System.out.println("Executing Before Method");
 		driver=initializeTestBaseSetup("chrome","https://www.gillette.co.in/en-in");
 //		InitialisePU(driver);
 		pu= new PageUtil(driver);
 		gpo=new GillatePageObjects(driver);
+		pu.deleteCookies();
 		bs.startReport();
 		System.out.println("Executed the Before Method");
 	}
@@ -102,7 +104,8 @@ public class StepDefinition extends BaseSetup
 
 	@When("^user clicked on Register link$")
 	public void user_clicked_on_Register_link() throws Throwable {
-		pu.click(gpo.getRegisterLinkXpath());
+//		pu.click(gpo.getRegisterLinkXpath());
+		pu.click(gpo.getLastName());
 	   
 	}
 	

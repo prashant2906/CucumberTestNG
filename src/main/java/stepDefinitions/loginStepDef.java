@@ -56,7 +56,10 @@ public class loginStepDef extends BaseSetup{
 
 	@Then("^user clicked on Signin button$")
 	public void user_clicked_on_Signin_button() throws Throwable {
-	  pu.click(gpo.getSigninButton());
+		pu.implicitWait(driver);
+		pu.click(gpo.getSigninButton());
+	  pu.explicitWaitForWebElement(driver, gpo.getLogoutLink());
+	  
 	  pu.click(gpo.getLogoutLink());
 	  pu.click(gpo.getlogoutConfirm());
 	}

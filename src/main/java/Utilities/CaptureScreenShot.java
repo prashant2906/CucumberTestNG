@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CaptureScreenShot {
 	
-	public static  String captureScreenshot(WebDriver driver,String screenshotName)
+	public static  String captureScreenshot(WebDriver driver)
 	{
 	 
 	try 
@@ -17,7 +17,7 @@ public class CaptureScreenShot {
 	TakesScreenshot ts=(TakesScreenshot)driver;
 	 
 	File source=ts.getScreenshotAs(OutputType.FILE);
-	String dest=	System.getProperty("user.dir") + "\\Reports\\FailedCasesScreenshot\\"+screenshotName+ ".png";
+	String dest=	System.getProperty("user.dir") + "\\Reports\\FailedCasesScreenshot\\"+System.currentTimeMillis()+".png";
 	File destination = new File(dest);
 			
 	FileUtils.copyFile(source, destination);

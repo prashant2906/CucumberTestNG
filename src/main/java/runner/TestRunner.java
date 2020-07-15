@@ -21,6 +21,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.cucumber.listener.Reporter;
@@ -42,10 +43,10 @@ import cucumber.runtime.model.CucumberFeature;
 			features = "src/main/java/fetaures", //the path of the feature files
 			glue={"stepDefinitions"}, //the path of the step definition files
 			format= {"pretty",
-					"html:target/Reports/cucumber-pretty",
+					"html:target/Reports/",
 					"json:target/Reports/cucumber.json",
 					"junit:target/Reports/cucumber.xml"}, //to generate different types of reporting
-			plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/html/ExtentReport.html",
+			plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/html/ExtentReportwithoutScreenshot.html",
 					"json:target/Reports/cucumber.json"},
 			monochrome = true, //display the console output in a proper readable format
 			strict = true, //it will check if any step is not defined in step definition file
@@ -53,7 +54,7 @@ import cucumber.runtime.model.CucumberFeature;
 		
 			)
 	 
-	public class TestRunner {
+	public class TestRunner extends BaseSetup {
 		private TestNGCucumberRunner testNGCucumberRunner;
 		
 		ExtentReports reports;
@@ -70,7 +71,7 @@ import cucumber.runtime.model.CucumberFeature;
 			List<String> aa = Arrays.asList(dateFormat.format(date).split(" "));
 			String name = (aa.get(0) + "(" + aa.get(1) + ")").replace(":", "-");
 			//reportFolderName = reportFilePath + "\\" + "Extent-Report-" + aa.get(0);
-			reportName =  System.getProperty("user.dir") + "\\Reports\\"+name+""+".html";
+			reportName =  System.getProperty("user.dir") + "\\Reports\\FinalReport"+name+""+".html";
 			htmlReporter = new ExtentHtmlReporter(new File(reportName));		
 			htmlReporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\Configurations\\extent-config.xml"));
 			htmlReporter.config().setChartVisibilityOnOpen(true);
@@ -81,7 +82,7 @@ import cucumber.runtime.model.CucumberFeature;
 				reports.setSystemInfo("Operating System", 	System.getProperty("os.name"));
 				reports.setSystemInfo("", "");	
 				reports.attachReporter(htmlReporter);
-				test=reports.createTest("Reportsss");
+				test=reports.createTest("Gillette Test");
 		}
 		
 		
@@ -155,21 +156,23 @@ import cucumber.runtime.model.CucumberFeature;
 			
 			if (result.getStatus() == ITestResult.SUCCESS) {
 				test.log(Status.PASS, "The Test Case named as : " + result.getName() + " is Passed");
-
+ 
 			} else if (result.getStatus() == ITestResult.FAILURE) {
 				test.log(Status.FAIL, "The Test Case named as : " + result.getName() + " is Failed");
-				test.log(Status.FAIL, "Test Failure : " + result.getThrowable());
+				
 				//String filename = result.getMethod().getMethodName();
-//				String screenshotPath = CaptureScreenShot.captureScreenshot(driver, result.getName());
-//				if (!(driver == null))// if driver closed by manually or api failed then screenshot will not taken.
-//					test.addScreenCaptureFromPath(screenshotPath);
+				String screenshotPath = CaptureScreenShot.captureScreenshot(driver);
+				
+				test.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+				if (!(driver == null))// if driver closed by manually or api failed then screenshot will not taken.
+					test.addScreenCaptureFromPath(screenshotPath);
 
 				
 			} else if (result.getStatus() == ITestResult.SKIP) {
 				test.log(Status.SKIP, "The Test Case named as : " + result.getName() + " is Skipped");
 
 			}
-		
+			
 		}
 		
 		catch (Exception e) 
@@ -183,12 +186,12 @@ import cucumber.runtime.model.CucumberFeature;
 	}
 //	
 //	
-//	@AfterTest
-//	public void endreport() {
-//		reports.flush();
-//         driver.quit();
-//		
-//	}
+	@AfterTest
+	public void endreport() {
+		reports.flush();
+         driver.quit();
+		
+	}
 	}
 	
 
